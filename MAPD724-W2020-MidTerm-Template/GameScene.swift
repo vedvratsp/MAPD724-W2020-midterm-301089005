@@ -1,3 +1,13 @@
+//Name: Vedvrat Singh
+//Student No.: 301089005
+
+//
+//  AppDelegate.swift
+//  MAPD724-W2020-Lesson2
+//
+//  Created by Tom Tsiliopoulos on 2020-01-15.
+//  Copyright © 2020 CentennialCollege. All rights reserved.
+//
 
 import UIKit
 import AVFoundation
@@ -31,25 +41,26 @@ class GameScene: SKScene {
         //self.config?.sceneState = .GAME
         self.name = "GAME"
         
-        // add ocean
+        // add ocean1 position from sk
         self.oceanSprite1 = Ocean()
         self.oceanSprite1?.position = CGPoint(x: 0, y: 0)
         self.addChild(oceanSprite1!)
         
+        // add ocean2 position from sk
         self.oceanSprite2 = Ocean()
         self.oceanSprite2?.position = CGPoint(x: 896, y: 0)
         self.addChild(oceanSprite2!)
         
-        // add plane
+        // add plane position from sk
         self.planeSprite = Plane()
         self.planeSprite?.position = CGPoint(x: -385, y: 0)
         self.addChild(planeSprite!)
         
-        // add island
+        // add island position from sk
         self.islandSprite = Island()
         self.addChild(islandSprite!)
         
-        // add clouds
+        // add clouds position from sk
         for index in 0...3
         {
             let cloud: Cloud = Cloud()
@@ -111,7 +122,7 @@ class GameScene: SKScene {
         for t in touches { self.touchUp(atPoint: t.location(in: self))}
     }
     
-    
+    //updates the scene uI
     override func update(_ currentTime: TimeInterval)
     {
         self.oceanSprite1?.Update()
