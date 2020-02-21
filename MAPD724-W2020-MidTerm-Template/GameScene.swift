@@ -61,7 +61,7 @@ class GameScene: SKScene {
         self.addChild(islandSprite!)
         
         // add clouds position from sk
-        for index in 0...3
+        for index in 0...0
         {
             let cloud: Cloud = Cloud()
             cloudSprites.append(cloud)
